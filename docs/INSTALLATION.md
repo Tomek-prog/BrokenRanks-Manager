@@ -79,7 +79,7 @@ Ensure Broken Ranks is installed and working:
 
 ### Download from GitHub Releases
 
-1. Go to [Releases Page](https://github.com/YOUR_USERNAME/brokenranks-manager/releases)
+1. Go to [Releases Page](https://github.com/Tomek-prog/BrokenRanks-Manager/releases)
 2. Find the latest release (e.g., `v1.2.0`)
 3. Download the ZIP file: `BrokenRanks-Manager-v1.X.X.zip`
 4. **File size:** ~50-80 MB
@@ -104,7 +104,7 @@ C:\BrokenRanks-Manager\
 │   └── ... (46 files)
 ├── zdj_rdzenie\           # Dungeon mode templates
 │   └── ... (25 files)
-├── .env                   # Configuration file
+├── .env                   # Configuration file (created next to main.exe)
 ├── version.json           # Version information
 └── README.md              # Quick start guide
 ```

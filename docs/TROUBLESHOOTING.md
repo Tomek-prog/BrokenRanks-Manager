@@ -550,7 +550,7 @@ Could not find zdj_2 directory
 
 1. **Check Your Channel**
    ```
-   .env file:
+   .env file (in the bot folder next to main.exe):
    UPDATE_CHANNEL=stable  # or "beta"
    
    GitHub Release marked as "pre-release"? Only beta channel sees it.
@@ -568,8 +568,8 @@ Could not find zdj_2 directory
 
 4. **Check GitHub Repo Setting**
    ```
-   .env file:
-   GITHUB_REPO=YOUR_USERNAME/brokenranks-manager
+   .env file (in the bot folder):
+   GITHUB_REPO=Tomek-prog/BrokenRanks-Manager
    
    Make sure this matches your actual repo!
    ```
