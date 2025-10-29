@@ -50,18 +50,6 @@ BrokenRanks-Manager is a **desktop automation tool** for the Broken Ranks MMORPG
 | Premium | 90 days | 124.99 PLN |
 | Lifetime | Forever | 499.00 PLN |
 
-Purchase at: [https://adminjaska.ovh](https://adminjaska.ovh)
-
-### Do you offer refunds?
-
-**Limited refunds available:**
-- **Trial period:** Test before committing (24h for 9.99 PLN)
-- **Refund window:** Within 24 hours of purchase
-- **Condition:** Bot doesn't work for technical reasons (not user error)
-
-See [Refund Policy](https://adminjaska.ovh/refund.html) for details.
-
----
 
 ## 🔑 Licensing & Activation
 
@@ -84,7 +72,6 @@ If you need multiple PCs:
 
 **HWID Reset Available:**
 - Each license includes **1 free HWID reset**
-- Contact support: support@adminjaska.ovh
 - Provide your license key and reason
 - Reset processed within 24-48 hours
 
@@ -116,8 +103,7 @@ If you need multiple PCs:
 
 Attempting to share or sell your license violates the [LICENSE](../LICENSE) agreement and may result in:
 - Immediate license revocation
-- No refund
-- Potential legal action
+
 
 ---
 
@@ -170,31 +156,9 @@ If you must use a VM:
 - Input simulation may not work correctly
 - Local desktop recommended
 
-### Can I run multiple bot instances?
-
-**No.** One bot instance per license.
-
-Running multiple instances:
-- Requires multiple licenses
-- Not officially supported (high CPU usage)
-- May cause detection issues
-
----
 
 ## 🤖 Bot Functionality
 
-### What game modes does the bot support?
-
-**Bot Jaska Mode:**
-- Instance farming (dungeons with boss)
-- Automatic enemy detection and targeting
-- Boss fight strategies for 3 character types
-- Death recovery and respawn
-
-**Bot Rdzenie Mode:**
-- Dungeon farming (rdzenie instances)
-- Configurable rest strategies
-- Custom enemy templates
 
 ### How does the bot detect enemies?
 
@@ -225,8 +189,7 @@ Running multiple instances:
 **Yes, several options:**
 - **Character type:** Mosiek/UK, VD/Druid, Rycerz/Sheed
 - **Rest strategy:** 6 different options
-- **Attack sequence:** Configurable in `bot_rdzenie_config.py`
-- **Thresholds:** Adjust image detection sensitivity
+
 
 ### What happens if I die?
 
@@ -240,7 +203,6 @@ Running multiple instances:
 ### How fast does the bot farm?
 
 **Typical performance:**
-- **Instances/hour:** 15-25 (depends on difficulty)
 - **Detection speed:** 50-80ms per screenshot
 - **Attack speed:** Limited by game mechanics
 
@@ -295,29 +257,12 @@ UPDATE_CHANNEL=stable  # or "beta"
 - Community help
 - Average response: 1-6 hours
 
-**Email:**
-- support@adminjaska.ovh
-- Response time: 24-48 hours
-- Include: License key (last 4 digits), error details, screenshots
 
 **Self-Help:**
 - [Installation Guide](INSTALLATION.md)
 - [Troubleshooting](TROUBLESHOOTING.md)
 - GitHub Issues (for bug reports)
 
-### Can I request features?
-
-**Yes!** We welcome feedback.
-
-**How to request:**
-1. Join our Discord
-2. Go to #feature-requests channel
-3. Describe your idea
-4. Community votes on features
-
-**Popular requests are prioritized** for future updates.
-
----
 
 ## 🔒 Safety & Security
 
@@ -366,7 +311,6 @@ We provide the tool as-is. Users are responsible for compliance with game rules.
 - Anonymous analytics (runtime, error count)
 - No personal data, passwords, or game credentials
 
-See [Privacy Policy](https://adminjaska.ovh/privacy.html) for details.
 
 ### Is my payment information secure?
 
@@ -392,10 +336,7 @@ See [Privacy Policy](https://adminjaska.ovh/privacy.html) for details.
 
 **No.** This is **proprietary closed-source software.**
 
-Reverse engineering, decompilation, or modification is **strictly prohibited** by the [LICENSE](../LICENSE) agreement and may result in:
-- License revocation
-- Legal action
-- Criminal prosecution
+Reverse engineering, decompilation, or modification is **strictly prohibited** by the [LICENSE](../LICENSE) agreement 
 
 ### Can I create my own image templates?
 
@@ -406,10 +347,6 @@ Reverse engineering, decompilation, or modification is **strictly prohibited** b
 - Name it descriptively (e.g., `my_enemy.png`)
 - Add to `bot_rdzenie_config.py`
 
-**Tips:**
-- Use grayscale or high contrast
-- Avoid UI elements that change
-- Test threshold values (0.6-0.9)
 
 ### How does HWID work technically?
 
@@ -445,8 +382,7 @@ Source code is confidential and not available for viewing, even for educational 
 **We're here to help!**
 
 - **Discord:** [https://discord.gg/bnMWW6km4Z](https://discord.gg/bnMWW6km4Z)
-- **Email:** support@adminjaska.ovh
-- **Website:** [https://adminjaska.ovh](https://adminjaska.ovh)
+
 
 ---
 
