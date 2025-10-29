@@ -152,7 +152,7 @@ Could not find zdj_2 directory
    - If "Pending": wait or contact support
 
 4. **Contact Support**
-   - Email: support@adminjaska.ovh
+   - Discord:[https://discord.gg/bnMWW6km4Z](https://discord.gg/bnMWW6km4Z)
    - Include: Payment receipt, purchase email
 
 ---
@@ -178,7 +178,7 @@ Could not find zdj_2 directory
 3. **You Formatted PC**
    - Reinstalling Windows = new HWID
    - Use your **1 free HWID reset**
-   - Email: support@adminjaska.ovh
+   - Discord:[https://discord.gg/bnMWW6km4Z](https://discord.gg/bnMWW6km4Z)
 
 4. **Already Used Free Reset**
    - Additional resets: 50 PLN
@@ -200,7 +200,7 @@ Could not find zdj_2 directory
 
 1. **Check Internet**
    ```
-   Open browser → Visit https://adminjaska.ovh
+   Open browser → Visit youtube.com
    If site loads: Internet OK
    If not: Fix internet connection
    ```
@@ -273,7 +273,7 @@ Could not find zdj_2 directory
 
 5. **Reduce Bot Workload**
    - Use "stable" update channel (less aggressive)
-   - Increase threshold in config (less sensitive)
+   
 
 ---
 
@@ -298,18 +298,12 @@ Could not find zdj_2 directory
    - Image recognition requires compute power
    - Modern CPUs can handle this safely
 
-2. **Optimize Bot Settings**
-   ```python
-   # In bot_rdzenie_config.py
-   ITERATION_DELAY = 3.0  # Increase from 2.0
-   ```
-
-3. **Close Background Programs**
+2. **Close Background Programs**
    - Windows Update
    - Antivirus scans
    - Cloud sync (OneDrive, Dropbox)
 
-4. **Better Cooling**
+3. **Better Cooling**
    - Clean PC dust filters
    - Improve airflow
    - Consider better CPU cooler
@@ -403,13 +397,8 @@ Could not find zdj_2 directory
    4. If not, templates may be outdated
    ```
 
-5. **Lower Threshold**
-   ```python
-   # In bot_rdzenie_config.py
-   ENEMY_THRESHOLD = 0.6  # Lower from 0.75
-   ```
 
-6. **Update Templates**
+5. **Update Templates**
    - Check Discord for updated zdj_2.zip
    - Game graphics may have changed
    - Download new templates
@@ -430,24 +419,12 @@ Could not find zdj_2 directory
 
 **Solutions:**
 
-1. **Increase Threshold**
-   ```python
-   # In bot_rdzenie_config.py
-   ENEMY_THRESHOLD = 0.85  # Increase from 0.75
-   ```
 
-2. **Update Templates**
+1. **Update Templates**
    - Use more specific enemy screenshots
    - Include unique parts (name, level indicator)
 
-3. **Check Click Offset**
-   ```python
-   # In bot_rdzenie_config.py
-   CLICK_OFFSET_Y = 30  # Increase from 20
-   # Clicks higher above detected sprite
-   ```
-
-4. **Disable Overlays**
+2. **Disable Overlays**
    - Turn off game overlays (Discord, MSI Afterburner)
    - Close browser over game area
    - Move chat window away
@@ -463,13 +440,8 @@ Could not find zdj_2 directory
 
 **Solutions:**
 
-1. **Open Potion Panel**
-   ```
-   Press 'P' in game to open potion panel
-   Bot can't detect potions if panel closed
-   ```
 
-2. **Check Potion Images**
+1. **Check Potion Images**
    ```
    zdj_2\ folder must have:
    - hp200.png, hp500.png, hp1000.png, hp2000.png
@@ -477,59 +449,14 @@ Could not find zdj_2 directory
    - konda200.png, etc.
    ```
 
-3. **Ensure Potions Visible**
+2. **Ensure Potions Visible**
    - Potion panel must be on screen
    - Not covered by other UI
    - Not minimized
 
-4. **Lower Potion Threshold**
-   ```python
-   # In code (advanced users only)
-   potion_threshold = 0.8  # Lower from 0.9
-   ```
-
 5. **Update Potion Templates**
    - Game may have changed potion graphics
    - Download updated zdj_2.zip from Discord
-
----
-
-### Problem: Bot Dies Repeatedly
-
-**Symptoms:**
-- Bot detects death
-- Respawns correctly
-- But dies again immediately
-
-**Causes:**
-- Not healing after respawn
-- Running back into dangerous area
-- Equipment broke
-
-**Solutions:**
-
-1. **Configure Rest After Death**
-   ```
-   In GUI:
-   Rest Strategy → "After death"
-   This heals before continuing
-   ```
-
-2. **Check Equipment Durability**
-   - Broken equipment = can't fight
-   - Repair before starting bot
-
-3. **Verify Rest Hotkey**
-   ```
-   Game settings:
-   Rest = 'R' key
-   
-   If different, update config
-   ```
-
-4. **Lower Instance Difficulty**
-   - Bot can't handle very hard content
-   - Use appropriate level instances
 
 ---
 
@@ -563,7 +490,6 @@ Could not find zdj_2 directory
 
 3. **Clear Update Cache**
    - Close bot
-   - Delete `C:\Users\<Name>\.license\update_cache.json` (if exists)
    - Restart bot
 
 4. **Check GitHub Repo Setting**
@@ -602,55 +528,6 @@ Could not find zdj_2 directory
 
 ---
 
-## 🔬 Advanced Troubleshooting
-
-### Enable Debug Logging
-
-**To get detailed logs:**
-
-1. Open `client/.env`
-2. Add line:
-   ```
-   LOG_LEVEL=DEBUG
-   ```
-3. Restart bot
-4. Check `license_client.log` for details
-
-### Check License File
-
-**Location:**
-```
-C:\Users\<YourName>\.license\license.json
-```
-
-**File encrypted** - but you can verify it exists.
-
-**If corrupted:**
-```
-1. Delete license.json
-2. Restart bot
-3. Re-activate license
-```
-
-### Test Image Recognition
-
-**Manually test template matching:**
-
-```python
-# Run in Python console
-import cv2
-import numpy as np
-
-# Load screenshot and template
-screenshot = cv2.imread('screenshot.png', cv2.IMREAD_GRAYSCALE)
-template = cv2.imread('zdj_2/przeciwnik_1.png', cv2.IMREAD_GRAYSCALE)
-
-# Match
-result = cv2.matchTemplate(screenshot, template, cv2.TM_CCOEFF_NORMED)
-min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-
-print(f"Confidence: {max_val}")  # Should be >0.7 for good match
-```
 
 ### Collect Support Information
 
@@ -658,7 +535,6 @@ print(f"Confidence: {max_val}")  # Should be >0.7 for good match
 
 1. **License Info**
    - Last 4 digits of key (e.g., `****-****-****-G7H8`)
-   - License type (Trial/Standard/Premium)
 
 2. **System Info**
    - Windows version: `winver`
@@ -666,33 +542,10 @@ print(f"Confidence: {max_val}")  # Should be >0.7 for good match
    - Antivirus: Name and version
 
 3. **Error Details**
-   - Full error message (copy from console)
    - Screenshot of error
    - When it happens (always, sometimes, specific scenario)
 
-4. **Logs**
-   - `license_client.log` (last 50 lines)
-   - Console output (if visible)
 
-### Factory Reset
-
-**Last resort - clears all settings:**
-
-```
-1. Close bot
-2. Delete:
-   - C:\Users\<Name>\.license\
-   - bot_statistics.json
-   - Any *.log files
-3. Keep:
-   - main.exe
-   - zdj_2\
-   - zdj_rdzenie\
-4. Restart bot
-5. Re-activate license
-```
-
----
 
 ## 📞 Still Stuck?
 
@@ -704,10 +557,6 @@ print(f"Confidence: {max_val}")  # Should be >0.7 for good match
 - Live help from community
 - Response time: 1-6 hours
 
-**Email Support:**
-- support@adminjaska.ovh
-- Response time: 24-48 hours
-- Include all info from "Collect Support Information"
 
 **Before Contacting:**
 1. Read this guide completely
@@ -715,11 +564,7 @@ print(f"Confidence: {max_val}")  # Should be >0.7 for good match
 3. Search Discord #support-archive
 4. Try basic fixes first
 
-**Emergency (Critical Security Issue):**
-- security@adminjaska.ovh
-- For exploits, vulnerabilities only
 
----
 
 **Last Updated:** January 2025  
 **Version:** 1.2.0
