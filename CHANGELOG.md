@@ -142,7 +142,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **New Configuration Required:**
 Add to your `.env` file:
 ```env
-GITHUB_REPO=YOUR_USERNAME/adminjaska-bot
+GITHUB_REPO=Tomek-prog/BrokenRanks-Manager
 UPDATE_CHANNEL=stable
 ```
 

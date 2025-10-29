@@ -58,7 +58,7 @@
 ### Quick Start
 
 1. **Download** the latest release:
-   - Go to [Releases](https://github.com/YOUR_USERNAME/brokenranks-manager/releases)
+   - Go to [Releases](https://github.com/Tomek-prog/BrokenRanks-Manager/releases)
    - Download `BrokenRanks-Manager-v1.X.X.zip`
 
 2. **Extract** the ZIP file to any folder (e.g. `C:\BrokenRanks-Manager\`)
